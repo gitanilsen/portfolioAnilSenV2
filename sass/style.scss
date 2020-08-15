@@ -1,0 +1,364 @@
+@import "config";
+//Menu Btn
+
+// PreLoader
+#loader {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+}
+// Navigation Sidebar
+.nav_sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: $bg-color;
+  position: fixed;
+  .profile_pic {
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    &:hover {
+      -webkit-filter: blur(1px);
+      filter: blur(1px);
+    }
+  }
+  .my_name {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .social_icons {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+    &:hover {
+      background-color: var(--blue);
+    }
+  }
+}
+//Nav links
+.nav_wrapper {
+  font-family: $s-font;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.4s ease;
+    i {
+      transition: color 0.4s ease;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &:hover i {
+      color: var(--blue);
+    }
+  }
+}
+//Main Wrapper
+.main_wrapper {
+  width: 80%;
+  min-height: auto;
+  float: right;
+  clear: both;
+  .showcase {
+    height: 100vh;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
+      ),
+      url(../assets/img/profile_pic2.jpg) no-repeat center/ cover fixed;
+    position: relative;
+    .showcase_content {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      color: #fff;
+      font-family: $s-font;
+    }
+  }
+}
+//Showcase heading and text
+.showcase_heading {
+  font-size: 4rem;
+  font-weight: 900;
+}
+// About
+.about {
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+//About img
+.about_img {
+  max-width: 100%;
+}
+.about_title {
+  h2 {
+    color: $heading-color;
+    font-family: $s-font;
+    font-weight: 700;
+  }
+  p {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+//Personal Details
+.personal_details {
+  i {
+    color: $heading-color;
+    margin-right: 16px;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  p .dark_text {
+    font-weight: 900;
+  }
+}
+//Skills
+.skills {
+  background: $light-blue-bg;
+  .progress {
+    height: 15px;
+    border-radius: 0;
+  }
+}
+
+//Portfolio starts here
+.portfolio {
+  height: auto;
+}
+//projects filter
+.project_filter {
+  .filter_container {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 30px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-family: $s-font;
+      font-weight: bold;
+      li {
+        cursor: pointer;
+        transition: color 0.4s ease;
+        &:hover {
+          color: var(--blue);
+        }
+      }
+    }
+  }
+}
+//Projects
+.projects {
+  .project_wrapper {
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    .project_img {
+      width: 100%;
+      height: 250px;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+}
+//view button
+.eye_wrapper {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  i {
+    color: var(--blue);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  &:hover > i {
+    opacity: 1;
+  }
+}
+//Portfolio ends here
+
+// Services starts here
+.services {
+  width: 100%;
+  height: auto;
+  background-color: $light-blue-bg;
+  padding-bottom: 1rem;
+  .services_wrapper {
+    .service_box {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 1rem;
+      background-color: $heading-color;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      -webkit-clip-path: polygon(
+        25% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        25% 100%,
+        0% 50%
+      );
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      cursor: pointer;
+      color: #fff;
+      transition: 0.4s ease;
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+// Services ends here
+// Contact starts
+.contact {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding-bottom: 1rem;
+  .info {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $light-blue-bg;
+      text-align: center;
+      line-height: 30px;
+      float: left;
+      color: var(--blue);
+    }
+
+    h4 {
+      margin-left: 2rem;
+      color: $heading-color;
+      font-weight: bold;
+    }
+    p {
+      margin-left: 2rem;
+    }
+  }
+  .form_container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Contact ends
+//testimonials starts
+.testimonials {
+  width: 100%;
+  height: auto;
+  background-color: $light-blue-bg;
+}
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.msg {
+  background-color: #fff;
+  padding: 2rem;
+  color: #333;
+  text-align: justify;
+  position: relative;
+  border-radius: 5px;
+  font-family: $s-font;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.msg::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%) rotate(45deg);
+  background-color: #fff;
+}
+.dp {
+  text-align: center;
+  margin-top: 2rem;
+  .p_name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $p-font;
+  }
+  .p-title {
+    color: gray;
+    font-size: 16px;
+  }
+}
+.dp_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+//testimonials Ends
+// Footer starts
+footer {
+  width: 100%;
+  height: 15vh;
+  background-color: $bg-color;
+  position: relative;
+}
+// Footer ends
+
+// GO to top
+.go_top_wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  background-color: var(--blue);
+  color: #fff;
+  a {
+    text-decoration: none;
+    color: #fff;
+    &:active {
+      color: #fff;
+    }
+  }
+}
+//Import Responsive
+@import "responsive";

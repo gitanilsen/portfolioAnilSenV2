@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap");
+$bg-color: #040b14;
+$light-blue-bg: #f5f8fd;
+$heading-color: #173b6c;
+$p-font: "Raleway", sans-serif;
+$s-font: "Open Sans", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  outline: none;
+  border: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $p-font;
+  overflow-x: hidden;
+}
+//Custum scrollbar
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: $bg-color;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: var(--blue);
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+}
+// Section Headings
+.section_heading {
+  color: $heading-color;
+  font-family: $s-font;
+  font-weight: 900;
+  position: relative;
+  text-transform: uppercase;
+  &::after {
+    content: "";
+    width: 70px;
+    height: 5px;
+    background-color: var(--blue);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

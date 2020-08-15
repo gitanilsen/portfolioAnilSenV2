@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  //Custum scrollbar
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  //Menu Btn
+  .menu_btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 2;
+    color: var(--blue);
+    cursor: pointer;
+  }
+  //nav Sidebar
+  .nav_sidebar {
+    width: 70%;
+    position: fixed;
+    top: 0;
+    z-index: 33;
+    // display: none;
+    transform: translateX(-105%);
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+  //nav display class for jquery
+  .show_menu {
+    transform: translateX(0%);
+    display: block;
+  }
+  //main wrapper
+  .main_wrapper {
+    width: 100%;
+    float: none;
+    .showcase {
+      //Aligning Background image for small devices
+      background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+        ),
+        url(../assets/img/profile_pic2.jpg) no-repeat 10% / cover fixed;
+    }
+  }
+}
